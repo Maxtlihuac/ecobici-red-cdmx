@@ -1,0 +1,52 @@
+name: Captura estado Ecobici (GBFS)
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: captura-gbfs
+  cancel-in-progress: false
+
+jobs:
+  captura:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Código (rama main)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Preparar rama de archivo gbfs-archive
+        run: |
+          git config user.name "captura-gbfs[bot]"
+          git config user.email "captura-gbfs@users.noreply.github.com"
+          if git fetch --depth=1 origin gbfs-archive 2>/dev/null; then
+            git worktree add -B gbfs-archive archive FETCH_HEAD
+          else
+            git worktree add --detach archive
+            cd archive
+            git checkout --orphan gbfs-archive
+            git rm -rf --quiet . || true
+            echo "# Archivo de estado de Ecobici (GBFS), capturado cada ~5 min. Ver rama main." > README.md
+          fi
+
+      - name: Capturar
+        run: python3 scripts/capture_gbfs.py --out archive
+
+      - name: Guardar
+        run: |
+          cd archive
+          git add -A
+          if git diff --cached --quiet; then echo "sin cambios"; exit 0; fi
+          git commit -q -m "captura $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git push -q origin gbfs-archive && exit 0
+            git pull -q --rebase --depth=1 origin gbfs-archive || true
+          done
+          exit 1
