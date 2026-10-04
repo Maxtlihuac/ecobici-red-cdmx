@@ -1,78 +1,80 @@
 # ecobici-red-cdmx
 
-**Diseño de la red de Ecobici con demanda censurada y un registro público de predicciones para la expansión de 2026.**
+*[Versión en español](README.es.md)*
 
-En agosto de 2026 SEMOVI anunció que Ecobici pasará de 687 a 1,111 estaciones (+424), de 9,308 a 15,000
-bicis, y llegará a Iztapalapa, Iztacalco y Tlalpan. Este proyecto pregunta, sólo con datos públicos:
-¿dónde poner esas estaciones y cuántos anclajes y bicis darle a cada una? Y lo más importante: **registra
-las predicciones antes de que abran las estaciones**, para compararlas después con los viajes reales.
+**Designing Mexico City's bike-share network with censored demand, plus a public pre-registered forecast for the 2026 expansion.**
 
-## Registro de predicciones · 4 de octubre de 2026
+In August 2026 Mexico City's Mobility Secretariat (SEMOVI) announced that Ecobici will grow from 687 to
+1,111 stations (+424) and from 9,308 to 15,000 bikes, reaching the boroughs of Iztapalapa, Iztacalco and
+Tlalpan. Using only public data, this project asks: where should those stations go, and how many docks and
+bikes should each one get? Most importantly, it **registers the predictions before the stations open**, so
+they can be checked against real trips later.
 
-| Alcaldía | Sitios | Anclajes | Bicis | Viajes/día · modelo de sitio | Viajes/día · ancla Encuesta OD 2017 (bajo – medio – alto) |
+## Pre-registered forecast · October 4, 2026
+
+| Borough | Sites | Docks | Bikes | Trips/day · site model | Trips/day · 2017 Household Travel Survey anchor (low – mid – high) |
 | --- | --- | --- | --- | --- | --- |
 | Iztapalapa | 248 | 6,728 | 3,345 | 18,754 | 17,031 – 33,962 – 36,326 |
 | Iztacalco | 60 | 1,686 | 835 | 4,692 | 4,693 – 9,358 – 10,009 |
 | Tlalpan | 116 | 3,038 | 1,508 | 8,470 | 2,159 – 4,305 – 4,605 |
 
-- Sitio por sitio, con intervalo de 80%: [`registro/registro_predicciones_2026-10-04.csv`](registro/registro_predicciones_2026-10-04.csv)
-- Supuestos y protocolo de validación: [`registro/registro_predicciones_2026-10-04.json`](registro/registro_predicciones_2026-10-04.json)
-- Huella SHA-256 del CSV: `46140e98aea343dce4ad729e7b517843dca48f7a35e7dadbf6aaa5fde217f45b` ([`registro/SHA256SUMS`](registro/SHA256SUMS))
+- Site-level predictions with 80% intervals: [`registro/registro_predicciones_2026-10-04.csv`](registro/registro_predicciones_2026-10-04.csv)
+- Assumptions and validation protocol: [`registro/registro_predicciones_2026-10-04.json`](registro/registro_predicciones_2026-10-04.json)
+- SHA-256 of the CSV: `46140e98aea343dce4ad729e7b517843dca48f7a35e7dadbf6aaa5fde217f45b` ([`registro/SHA256SUMS`](registro/SHA256SUMS)), sealed in release [`registro-2026-10-04`](../../releases/tag/registro-2026-10-04)
 
-Verificar que el archivo no cambió: `python scripts/verificar_registro.py`
+Verify the file has not changed: `python scripts/verificar_registro.py`
 
-**Hipótesis principal:** el modelo de sitio y la encuesta discrepan (Tlalpan: el modelo duplica a la
-encuesta; Iztapalapa: la encuesta casi duplica al modelo). Los datos reales dirán qué ancla sirve más para
-planear en zonas sin historia.
+**Main hypothesis:** the site model and the travel survey disagree (Tlalpan: the model is twice the survey;
+Iztapalapa: the survey is almost twice the model). Real data will show which anchor is more useful for
+planning in areas with no bike-share history.
 
-**Cómo se validará:** cuando las estaciones aparezcan en el feed y en los datos abiertos mensuales,
-(1) por alcaldía, viajes/día reales contra ambas anclas; (2) por estación real, la predicción del sitio
-registrado más cercano (<300 m): cobertura del intervalo 80% y captura de demanda del top-20%;
-(3) comparación contra una regla simple (cercanía a Metro/Metrobús + ciclovía). La demanda real de las
-estaciones nuevas se medirá corrigiendo por censura (tiempo vacías o llenas) con la captura del estado
-de este repositorio.
+**How it will be validated:** once new stations appear in the live feed and in the monthly open data,
+(1) per borough, real trips/day against both anchors; (2) per real station, the prediction of the nearest
+registered site (<300 m): 80% interval coverage and demand captured by the top 20%; (3) comparison against a
+simple rule (proximity to Metro/Metrobús + bike lane). True demand at new stations will be measured
+correcting for censoring (time spent empty or full) using the station-status capture in this repository.
 
-![Sitios registrados](registro/mapa_registro.png)
+![Registered sites](registro/mapa_registro.png)
 
-## Captura del estado de las estaciones
+## Station-status capture
 
-[`.github/workflows/captura_gbfs.yml`](.github/workflows/captura_gbfs.yml) guarda cada ~5 minutos el estado
-de todas las estaciones (bicis disponibles, dañadas, anclajes libres) en la rama `gbfs-archive`, y registra
-en `info/cambios.csv` cada alta, baja o cambio de capacidad: así se detecta cuándo abre cada estación nueva.
-GitHub no garantiza el horario exacto; se esperan retrasos y huecos ocasionales.
+[`.github/workflows/captura_gbfs.yml`](.github/workflows/captura_gbfs.yml) stores the status of every station
+(bikes available, disabled, free docks) roughly every 5 minutes in the `gbfs-archive` branch, and logs every
+station opening, closure or capacity change in `info/cambios.csv`, so the opening date of each new station is
+recorded. GitHub does not guarantee exact timing; occasional delays and gaps are expected.
 
-## Resultados hasta ahora
+## Results so far
 
-| Etapa | Hallazgo |
+| Stage | Finding |
 | --- | --- |
-| Reconstrucción (ene–sep 2026) | 13.9 M viajes; ~3,900 bicis rebalanceadas en camión por día, reconstruidas por cadena de cada bici. |
-| Demanda censurada | Retiros observados 50,832/día; demanda estimada 53,793/día (+5.8%); retiros perdidos 370–4,141/día. |
-| Ranking de sitios (validación espacial) | Un modelo de gradient boosting captura 28.8% de la demanda con el top-20%, igual que una regla simple (29.0%); oráculo 38.7%. |
-| Ola de expansión 2023→2024 (120 estaciones) | Modelo 28.9% vs. regla simple 27.6% (diferencia no significativa). Los modelos subestimaron 12–21% el nivel de demanda de estaciones nuevas → factor de corrección 1.198. |
+| Reconstruction (Jan–Sep 2026) | 13.9 M trips; ~3,900 bikes rebalanced by truck per day, reconstructed from each bike's trip chain. |
+| Censored demand | Observed pickups 50,832/day; estimated demand 53,793/day (+5.8%); lost pickups 370–4,141/day. |
+| Site ranking (spatial cross-validation) | Gradient boosting captures 28.8% of demand with the top 20% of sites, same as a simple rule (29.0%); oracle 38.7%. |
+| 2023→2024 expansion wave (120 stations) | Model 28.9% vs. simple rule 27.6% (difference not significant). Models under-predicted new-station demand by 12–21% → level correction factor 1.198. |
 
-Lectura honesta: rankear esquina por esquina no mejora sobre una regla simple. El aporte está en el
-dimensionamiento (demanda censurada, corrección de nivel, intervalos) y en el reparto entre zonas.
+Honest reading: ranking corner by corner does not beat a simple rule. The value lies in sizing (censored
+demand, level correction, intervals) and in allocation across areas.
 
-## Método
+## Method
 
-1. **Cadenas por bici** (`src/chains.py`): si un viaje termina en A y el siguiente de esa bici empieza en
-   B ≠ A, hubo una reubicación. Con eso se reconstruyen cotas del inventario por estación cada 10 min.
-2. **Demanda censurada** (`run_censored.py`): sólo se cuentan retiros cuando seguro había bici y devoluciones
-   cuando seguro había anclaje; tasa por estación × hora con Gamma-Poisson jerárquico. Adapta el tratamiento
-   de censura endógena de la tesis *Diseño y evaluación de una política de reposición multiproducto sensible a
-   liquidez para nanostores* (Gamón Guerrero y Macías Herrera, UNAM, 2026).
-3. **Contexto** (`src/context.py`): Censo 2020 por AGEB, DENUE, GTFS, infraestructura ciclista.
-4. **Prueba retrospectiva** (`run_wave.py`) y **asignación** (`run_allocation.py`): selección voraz de 424
-   sitios con separación ≥300 m; anclajes y bicis proporcionales a la demanda corregida.
+1. **Bike trip chains** (`src/chains.py`): if a trip ends at A and the same bike's next trip starts at B ≠ A,
+   the bike was relocated. This yields bounds on each station's inventory every 10 minutes.
+2. **Censored demand** (`run_censored.py`): pickups are counted only when a bike was surely available, and
+   returns only when a dock was surely free; station × hour rates with a hierarchical Gamma-Poisson model.
+   Adapts the endogenous-censoring treatment from the undergraduate thesis *Diseño y evaluación de una política
+   de reposición multiproducto sensible a liquidez para nanostores* (Gamón Guerrero & Macías Herrera, UNAM, 2026).
+3. **Context** (`src/context.py`): 2020 Census by block group (AGEB), DENUE business directory, GTFS, bike lanes.
+4. **Retrospective test** (`run_wave.py`) and **allocation** (`run_allocation.py`): greedy selection of 424
+   sites at least 300 m apart; docks and bikes proportional to level-corrected demand.
 
-## Reproducir
+## Reproduce
 
-Python 3.11+ con pandas, numpy, scipy, scikit-learn y matplotlib. Los datos no se incluyen; colócalos en
-`data/` (o define `ECOBICI_DATA`):
+Python 3.11+ with pandas, numpy, scipy, scikit-learn and matplotlib. Raw data is not included; place it in
+`data/` (or set `ECOBICI_DATA`):
 
-- `data/*.csv` y `data/viajes_2026/*.csv`: viajes mensuales de [Ecobici datos abiertos](https://ecobici.cdmx.gob.mx/datos-abiertos/)
-- `data/station_information.json`: [GBFS de Ecobici](https://gbfs.mex.lyftbikes.com/gbfs/gbfs.json)
-- `data/contexto/`: GTFS, estaciones del sistema anterior, cicloestaciones, infraestructura ciclista y Censo 2020 por AGEB de [Datos Abiertos CDMX](https://datos.cdmx.gob.mx/); [DENUE](https://www.inegi.org.mx/app/descarga/) y [EOD 2017](https://www.inegi.org.mx/programas/eod/2017/) de INEGI
+- `data/*.csv` and `data/viajes_2026/*.csv`: monthly trips from [Ecobici open data](https://ecobici.cdmx.gob.mx/datos-abiertos/)
+- `data/station_information.json`: [Ecobici GBFS](https://gbfs.mex.lyftbikes.com/gbfs/gbfs.json)
+- `data/contexto/`: GTFS, former-system stations, current stations, bike infrastructure and 2020 Census by AGEB from [Mexico City Open Data](https://datos.cdmx.gob.mx/); [DENUE](https://www.inegi.org.mx/app/descarga/) and the [2017 Household Travel Survey (EOD)](https://www.inegi.org.mx/programas/eod/2017/) from INEGI
 
 ```bash
 python tests/test_chains.py
@@ -80,8 +82,8 @@ python run_phase0.py --raw data/viajes_2026 --stations data/station_information.
 python run_context.py && python run_wave.py && python run_censored.py && python run_allocation.py
 ```
 
-## Créditos y trabajo relacionado
+## Credits and related work
 
-- [Jero110/movilidad-cdmx](https://github.com/Jero110/movilidad-cdmx): rebalanceo operativo de Ecobici con un asignador MILP; este proyecto aborda el diseño de la red, no la operación diaria.
-- [MaxHalford/bike-sharing-history](https://github.com/MaxHalford/bike-sharing-history): archivo histórico de estado de estaciones.
-- Datos de Ecobici, Gobierno de la Ciudad de México, INEGI. Código bajo licencia MIT.
+- [Jero110/movilidad-cdmx](https://github.com/Jero110/movilidad-cdmx): operational Ecobici rebalancing with a MILP assigner; this project addresses network design, not daily operations.
+- [MaxHalford/bike-sharing-history](https://github.com/MaxHalford/bike-sharing-history): historical station-status archive.
+- Data from Ecobici, Government of Mexico City, and INEGI. Code under the MIT license.
