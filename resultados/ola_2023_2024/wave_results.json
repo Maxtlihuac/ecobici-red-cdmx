@@ -1,0 +1,103 @@
+{
+ "train_estaciones_2023": 557,
+ "nuevas_2024": 120,
+ "tipo": {
+  "ubicacion_nueva": 115,
+  "reapertura": 5
+ },
+ "demanda_media_entrenamiento": 81.2,
+ "demanda_media_nuevas_oct24": 62.1,
+ "demanda_media_nuevas_oct25": 59.2,
+ "todas_dem24": {
+  "n": 120,
+  "k_top20": 24,
+  "oraculo": 0.398,
+  "pred_azar": {
+   "captura_top20": 0.211,
+   "spearman": 0.049
+  },
+  "pred_heur": {
+   "captura_top20": 0.276,
+   "spearman": 0.38
+  },
+  "pred_vecinos": {
+   "captura_top20": 0.273,
+   "spearman": 0.314,
+   "sesgo_nivel_%": -21.3
+  },
+  "pred_gbm": {
+   "captura_top20": 0.289,
+   "spearman": 0.416,
+   "sesgo_nivel_%": -16.5
+  }
+ },
+ "ubicacion_nueva_dem24": {
+  "n": 115,
+  "k_top20": 23,
+  "oraculo": 0.397,
+  "pred_azar": {
+   "captura_top20": 0.225,
+   "spearman": 0.025
+  },
+  "pred_heur": {
+   "captura_top20": 0.286,
+   "spearman": 0.379
+  },
+  "pred_vecinos": {
+   "captura_top20": 0.285,
+   "spearman": 0.307,
+   "sesgo_nivel_%": -18.7
+  },
+  "pred_gbm": {
+   "captura_top20": 0.291,
+   "spearman": 0.38,
+   "sesgo_nivel_%": -15.0
+  }
+ },
+ "todas_dem25": {
+  "n": 120,
+  "k_top20": 24,
+  "oraculo": 0.394,
+  "pred_azar": {
+   "captura_top20": 0.21,
+   "spearman": 0.034
+  },
+  "pred_heur": {
+   "captura_top20": 0.267,
+   "spearman": 0.312
+  },
+  "pred_vecinos": {
+   "captura_top20": 0.279,
+   "spearman": 0.353,
+   "sesgo_nivel_%": -17.3
+  },
+  "pred_gbm": {
+   "captura_top20": 0.29,
+   "spearman": 0.378,
+   "sesgo_nivel_%": -12.3
+  }
+ },
+ "ubicacion_nueva_dem25": {
+  "n": 115,
+  "k_top20": 23,
+  "oraculo": 0.393,
+  "pred_azar": {
+   "captura_top20": 0.221,
+   "spearman": 0.011
+  },
+  "pred_heur": {
+   "captura_top20": 0.281,
+   "spearman": 0.312
+  },
+  "pred_vecinos": {
+   "captura_top20": 0.291,
+   "spearman": 0.346,
+   "sesgo_nivel_%": -15.2
+  },
+  "pred_gbm": {
+   "captura_top20": 0.291,
+   "spearman": 0.346,
+   "sesgo_nivel_%": -11.4
+  }
+ }
+}

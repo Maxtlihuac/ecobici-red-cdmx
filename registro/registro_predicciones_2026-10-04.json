@@ -1,0 +1,63 @@
+{
+ "fecha_registro": "2026-10-04",
+ "sha256_csv": "46140e98aea343dce4ad729e7b517843dca48f7a35e7dadbf6aaa5fde217f45b",
+ "supuestos": {
+  "estaciones_nuevas": 424,
+  "separacion_min_m": 300.0,
+  "anclajes_media": 27.0,
+  "bicis_nuevas": 5692,
+  "factor_correccion_nivel": 1.198,
+  "intervalo_80_log": [
+   -0.705,
+   0.555
+  ],
+  "conversion_eod_a_ecobici_por_alcaldia": {
+   "Azcapotzalco": 0.496,
+   "Benito Juárez": 0.955,
+   "Coyoacán": 1.355,
+   "Cuauhtémoc": 1.37,
+   "Miguel Hidalgo": 1.503
+  },
+  "conversion_p10_p50_p90": [
+   0.68,
+   1.355,
+   1.45
+  ]
+ },
+ "resumen_por_alcaldia": [
+  {
+   "alcaldia": "Iztapalapa",
+   "estaciones": 248,
+   "anclajes": 6728,
+   "bicis": 3345,
+   "dem_modelo_sitio_dia": 18754,
+   "dem_ancla_eod_dia_bajo": 17031,
+   "dem_ancla_eod_dia_medio": 33962,
+   "dem_ancla_eod_dia_alto": 36326,
+   "poblacion_cubierta_500m": 0.562
+  },
+  {
+   "alcaldia": "Iztacalco",
+   "estaciones": 60,
+   "anclajes": 1686,
+   "bicis": 835,
+   "dem_modelo_sitio_dia": 4692,
+   "dem_ancla_eod_dia_bajo": 4693,
+   "dem_ancla_eod_dia_medio": 9358,
+   "dem_ancla_eod_dia_alto": 10009,
+   "poblacion_cubierta_500m": 0.745
+  },
+  {
+   "alcaldia": "Tlalpan",
+   "estaciones": 116,
+   "anclajes": 3038,
+   "bicis": 1508,
+   "dem_modelo_sitio_dia": 8470,
+   "dem_ancla_eod_dia_bajo": 2159,
+   "dem_ancla_eod_dia_medio": 4305,
+   "dem_ancla_eod_dia_alto": 4605,
+   "poblacion_cubierta_500m": 0.409
+  }
+ ],
+ "como_validar": "Cuando las estaciones nuevas aparezcan en GBFS y en los datos abiertos mensuales: (1) por alcaldía, comparar viajes/día reales vs. modelo de sitio y ancla EOD; (2) por estación real, asignar la predicción del sitio registrado más cercano (<300 m) y medir cobertura del intervalo 80% y captura top-20%; (3) comparar contra la heurística simple."
+}

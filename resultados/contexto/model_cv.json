@@ -1,0 +1,57 @@
+{
+ "n": 677,
+ "folds": 10,
+ "media": {
+  "R2_log": -0.095,
+  "MAE_viajes_dia": 35.3,
+  "captura_top20": 0.116,
+  "spearman": -0.619
+ },
+ "ridge": {
+  "R2_log": 0.138,
+  "MAE_viajes_dia": 30.8,
+  "captura_top20": 0.279,
+  "spearman": 0.435
+ },
+ "gbm": {
+  "R2_log": 0.192,
+  "MAE_viajes_dia": 29.7,
+  "captura_top20": 0.288,
+  "spearman": 0.501
+ },
+ "ridge_sin_red": {
+  "R2_log": 0.167,
+  "MAE_viajes_dia": 30.1,
+  "captura_top20": 0.289,
+  "spearman": 0.446
+ },
+ "gbm_sin_red": {
+  "R2_log": 0.183,
+  "MAE_viajes_dia": 29.5,
+  "captura_top20": 0.302,
+  "spearman": 0.493
+ },
+ "captura_top20_oraculo": 0.387,
+ "demanda_media_dia": 78.6,
+ "spearman_por_caracteristica": {
+  "pob_500": -0.078,
+  "pob_1000": -0.062,
+  "empleo_300": 0.448,
+  "negocios_300": 0.402,
+  "empleo_500": 0.405,
+  "negocios_500": 0.387,
+  "comercio_500": 0.3,
+  "alimentos_500": 0.486,
+  "educacion_500": 0.299,
+  "oficinas_500": 0.396,
+  "dist_metro": -0.229,
+  "dist_metrobus": -0.418,
+  "dist_tren": -0.022,
+  "dist_trole": 0.066,
+  "rutas_bus_300": 0.235,
+  "ciclovia_m_300": 0.358,
+  "ciclovia_m_500": 0.377,
+  "estaciones_500": 0.354,
+  "dist_vecina": -0.162
+ }
+}

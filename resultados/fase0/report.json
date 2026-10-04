@@ -1,0 +1,75 @@
+{
+ "audit": {
+  "rows": 13877978,
+  "t_out_min": "2022-10-03 19:17:58",
+  "t_out_max": "2026-09-30 23:56:06",
+  "trips_per_month": {
+   "2022-10": 1,
+   "2023-11": 1,
+   "2024-02": 1,
+   "2024-08": 1,
+   "2024-09": 1,
+   "2025-06": 1,
+   "2025-08": 1,
+   "2025-09": 1,
+   "2025-10": 1,
+   "2025-11": 4,
+   "2025-12": 110,
+   "2026-01": 1525344,
+   "2026-02": 1528648,
+   "2026-03": 1653315,
+   "2026-04": 1595125,
+   "2026-05": 1615188,
+   "2026-06": 1494944,
+   "2026-07": 1492829,
+   "2026-08": 1473629,
+   "2026-09": 1498833
+  },
+  "bad_datetime": 0,
+  "exact_duplicates": 0,
+  "duration_min_p50": 11.95,
+  "duration_negative": 0,
+  "duration_under_1min_same_station": 0,
+  "duration_over_3h": 5992,
+  "bikes_seen": 7472,
+  "stations_in_trips": 682,
+  "stations_in_gbfs": 677,
+  "stations_in_trips_not_gbfs": [
+   "1000",
+   "Temporal 1",
+   "Temporal 2",
+   "Temporal 3",
+   "Temporal 4"
+  ],
+  "n_stations_in_trips_not_gbfs": 5,
+  "gbfs_docks_total": 18197
+ },
+ "window": [
+  "2026-01-01 00:00:00",
+  "2026-10-01 00:00:00"
+ ],
+ "dropped_outside_window": 123,
+ "dropped_over_3h": 5992,
+ "clean_rows": 13877855,
+ "relocation": {
+  "gaps_total": 13870386,
+  "share_idle": 0.9188031248733813,
+  "share_reloc": 0.07616889681368637,
+  "share_reloc_long": 0.005027978312932315,
+  "share_overlap": 0.0,
+  "reloc_per_day": 3884.1617647058824,
+  "reloc_long_per_day": 256.3970588235294,
+  "reloc_window_hours_p50": 3.4497222222222224,
+  "reloc_window_hours_p90": 15.366111111111111
+ },
+ "corr_net_users_vs_net_truck": -0.9991743564529532,
+ "system": {
+  "share_station_time_empty_certain": 0.009727715481178621,
+  "share_station_time_empty_possible": 0.09409734723152234,
+  "share_station_time_full_certain": 0.005590116018064578,
+  "share_station_time_full_possible": 0.10325292325343882,
+  "mean_bikes_in_stations_L": 4281.624185999186,
+  "mean_bikes_in_stations_U": 8965.280525030525,
+  "mean_uncertainty_band_per_station": 6.9200101242405525
+ }
+}

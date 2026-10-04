@@ -1,0 +1,180 @@
+{
+ "dias": 273,
+ "retiros_observados_dia": 50832,
+ "retiros_demanda_estimada_dia": 53793,
+ "retiros_perdidos_dia_rango": [
+  370,
+  4141
+ ],
+ "devoluciones_observadas_dia": 50830,
+ "devoluciones_perdidas_dia_rango": [
+  263,
+  6560
+ ],
+ "fraccion_tiempo_con_evidencia_limpia_retiros": 0.904,
+ "concentracion_top10pct_perdidas_ret_max": 0.263,
+ "top_perdida_retiros": [
+  {
+   "station": "084",
+   "name": "CE-084 Chilpancingo - Tlaxcala",
+   "cap": 19,
+   "obs_out_dia": 90.8,
+   "perd_ret_min_dia": 0.2,
+   "perd_ret_max_dia": 50.5
+  },
+  {
+   "station": "271-272",
+   "name": "CE-271-272 Jesús García - Carlos J. Meneses",
+   "cap": 74,
+   "obs_out_dia": 343.8,
+   "perd_ret_min_dia": 0.0,
+   "perd_ret_max_dia": 38.3
+  },
+  {
+   "station": "402",
+   "name": "CE-402 Uxmal-Municipio Libre",
+   "cap": 27,
+   "obs_out_dia": 46.5,
+   "perd_ret_min_dia": 26.4,
+   "perd_ret_max_dia": 29.6
+  },
+  {
+   "station": "454",
+   "name": "CE-454 Montes Urales-Monte Pelvoux",
+   "cap": 15,
+   "obs_out_dia": 44.4,
+   "perd_ret_min_dia": 2.2,
+   "perd_ret_max_dia": 28.4
+  },
+  {
+   "station": "208",
+   "name": "CE-208 Hesiodo-Lamartine",
+   "cap": 25,
+   "obs_out_dia": 282.8,
+   "perd_ret_min_dia": 0.0,
+   "perd_ret_max_dia": 24.6
+  },
+  {
+   "station": "675",
+   "name": "CE-675 Manuel Castro Padilla - Av. Revolución",
+   "cap": 35,
+   "obs_out_dia": 112.0,
+   "perd_ret_min_dia": 0.0,
+   "perd_ret_max_dia": 24.6
+  },
+  {
+   "station": "211",
+   "name": "CE-211 Isaac Newton-Horacio",
+   "cap": 35,
+   "obs_out_dia": 120.7,
+   "perd_ret_min_dia": 0.0,
+   "perd_ret_max_dia": 23.0
+  },
+  {
+   "station": "457",
+   "name": "CE-457 Av. Prado Norte-Explanada",
+   "cap": 17,
+   "obs_out_dia": 39.3,
+   "perd_ret_min_dia": 0.7,
+   "perd_ret_max_dia": 22.2
+  },
+  {
+   "station": "458",
+   "name": "CE-458 Montes Urales-Volcán",
+   "cap": 19,
+   "obs_out_dia": 41.6,
+   "perd_ret_min_dia": 0.4,
+   "perd_ret_max_dia": 21.5
+  },
+  {
+   "station": "041",
+   "name": "CE-041 Reforma - Av. de la República",
+   "cap": 33,
+   "obs_out_dia": 163.3,
+   "perd_ret_min_dia": 0.0,
+   "perd_ret_max_dia": 21.5
+  }
+ ],
+ "top_perdida_devoluciones": [
+  {
+   "station": "208",
+   "name": "CE-208 Hesiodo-Lamartine",
+   "cap": 25,
+   "obs_in_dia": 242.8,
+   "perd_dev_min_dia": 1.7,
+   "perd_dev_max_dia": 125.5
+  },
+  {
+   "station": "548",
+   "name": "CE-548 Dr. Mariano Azuela - Jose Antonio Alzate",
+   "cap": 39,
+   "obs_in_dia": 331.4,
+   "perd_dev_min_dia": 1.1,
+   "perd_dev_max_dia": 110.5
+  },
+  {
+   "station": "052",
+   "name": "CE-052 Hidalgo - Trujano",
+   "cap": 19,
+   "obs_in_dia": 214.6,
+   "perd_dev_min_dia": 7.0,
+   "perd_dev_max_dia": 100.5
+  },
+  {
+   "station": "064",
+   "name": "CE-064 Sonora - Ámsterdam",
+   "cap": 27,
+   "obs_in_dia": 278.9,
+   "perd_dev_min_dia": 0.4,
+   "perd_dev_max_dia": 93.1
+  },
+  {
+   "station": "014",
+   "name": "CE-014 Reforma - Río de Plata",
+   "cap": 39,
+   "obs_in_dia": 273.6,
+   "perd_dev_min_dia": 0.2,
+   "perd_dev_max_dia": 78.6
+  },
+  {
+   "station": "017",
+   "name": "CE-017 Reforma - Río Tiber",
+   "cap": 27,
+   "obs_in_dia": 174.4,
+   "perd_dev_min_dia": 1.3,
+   "perd_dev_max_dia": 71.1
+  },
+  {
+   "station": "043",
+   "name": "CE-043 Revillagigedo - Juárez",
+   "cap": 31,
+   "obs_in_dia": 230.2,
+   "perd_dev_min_dia": 0.9,
+   "perd_dev_max_dia": 69.2
+  },
+  {
+   "station": "271-272",
+   "name": "CE-271-272 Jesús García - Carlos J. Meneses",
+   "cap": 74,
+   "obs_in_dia": 554.4,
+   "perd_dev_min_dia": 0.1,
+   "perd_dev_max_dia": 68.2
+  },
+  {
+   "station": "007",
+   "name": "CE-007 Río Elba - Río Lerma",
+   "cap": 23,
+   "obs_in_dia": 181.2,
+   "perd_dev_min_dia": 2.5,
+   "perd_dev_max_dia": 67.8
+  },
+  {
+   "station": "029",
+   "name": "CE-029 Reforma - Bucareli",
+   "cap": 35,
+   "obs_in_dia": 216.1,
+   "perd_dev_min_dia": 0.1,
+   "perd_dev_max_dia": 64.3
+  }
+ ]
+}
