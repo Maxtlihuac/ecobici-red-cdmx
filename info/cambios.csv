@@ -11,3 +11,5 @@ detectado_utc,tipo,station_id,nombre,lat,lon,capacidad
 2026-10-05T06:09:02+00:00,capacidad,499,CE-709 Inglaterra - Antigua Taxqueña,19.344275,-99.149988,23
 2026-10-05T06:09:02+00:00,capacidad,95,CE-060 Mazatlán - Fernando Montes de Oca,19.414099314684794,-99.17715847497675,39
 2026-10-05T06:09:02+00:00,capacidad,353,CE-026 Reforma - Versalles,19.432595,-99.154995,16
+2026-10-05T14:32:51+00:00,capacidad,355,CE-045 Durango - Sonora,19.418749,-99.171942,40
+2026-10-05T14:32:51+00:00,capacidad,353,CE-026 Reforma - Versalles,19.432595,-99.154995,15
