@@ -13,3 +13,6 @@ detectado_utc,tipo,station_id,nombre,lat,lon,capacidad
 2026-10-05T06:09:02+00:00,capacidad,353,CE-026 Reforma - Versalles,19.432595,-99.154995,16
 2026-10-05T14:32:51+00:00,capacidad,355,CE-045 Durango - Sonora,19.418749,-99.171942,40
 2026-10-05T14:32:51+00:00,capacidad,353,CE-026 Reforma - Versalles,19.432595,-99.154995,15
+2026-10-05T21:36:15+00:00,capacidad,419,CE-369 Porfirio Díaz-Av. Insurgentes,19.379941,-99.177224,34
+2026-10-05T21:36:15+00:00,capacidad,355,CE-045 Durango - Sonora,19.418749,-99.171942,39
+2026-10-05T21:36:15+00:00,capacidad,106,CE-029 Reforma - Bucareli,19.434944,-99.150295,36
