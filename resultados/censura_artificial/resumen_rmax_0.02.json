@@ -1,0 +1,170 @@
+{
+ "estaciones_base": 137,
+ "escenarios": [
+  {
+   "I0": 2,
+   "censura_ventanas": 0.0368,
+   "demanda_perdida": 0.1412,
+   "oraculo": {
+    "sesgo_tasa": 0.0498,
+    "sesgo_vs_oraculo": 0.0,
+    "logscore_demanda_real": -0.584,
+    "servicio_con_S90": 0.9475,
+    "S90_menos_oraculo_medio": 0.0
+   },
+   "ingenuo": {
+    "sesgo_tasa": -0.0751,
+    "sesgo_vs_oraculo": -0.119,
+    "logscore_demanda_real": -0.596,
+    "servicio_con_S90": 0.9157,
+    "S90_menos_oraculo_medio": -0.32
+   },
+   "exclusion": {
+    "sesgo_tasa": -0.089,
+    "sesgo_vs_oraculo": -0.1322,
+    "logscore_demanda_real": -0.5959,
+    "servicio_con_S90": 0.9118,
+    "S90_menos_oraculo_medio": -0.35
+   },
+   "tesis": {
+    "sesgo_tasa": 0.0559,
+    "sesgo_vs_oraculo": 0.0058,
+    "logscore_demanda_real": -0.5852,
+    "servicio_con_S90": 0.9471,
+    "S90_menos_oraculo_medio": 0.02
+   }
+  },
+  {
+   "I0": 4,
+   "censura_ventanas": 0.0285,
+   "demanda_perdida": 0.1078,
+   "oraculo": {
+    "sesgo_tasa": 0.0572,
+    "sesgo_vs_oraculo": 0.0,
+    "logscore_demanda_real": -0.584,
+    "servicio_con_S90": 0.9487,
+    "S90_menos_oraculo_medio": 0.0
+   },
+   "ingenuo": {
+    "sesgo_tasa": -0.0376,
+    "sesgo_vs_oraculo": -0.0897,
+    "logscore_demanda_real": -0.5905,
+    "servicio_con_S90": 0.9287,
+    "S90_menos_oraculo_medio": -0.23
+   },
+   "exclusion": {
+    "sesgo_tasa": -0.0466,
+    "sesgo_vs_oraculo": -0.0982,
+    "logscore_demanda_real": -0.5896,
+    "servicio_con_S90": 0.9278,
+    "S90_menos_oraculo_medio": -0.25
+   },
+   "tesis": {
+    "sesgo_tasa": 0.0638,
+    "sesgo_vs_oraculo": 0.0063,
+    "logscore_demanda_real": -0.5847,
+    "servicio_con_S90": 0.9493,
+    "S90_menos_oraculo_medio": 0.03
+   }
+  },
+  {
+   "I0": 6,
+   "censura_ventanas": 0.0218,
+   "demanda_perdida": 0.08,
+   "oraculo": {
+    "sesgo_tasa": 0.0634,
+    "sesgo_vs_oraculo": 0.0,
+    "logscore_demanda_real": -0.584,
+    "servicio_con_S90": 0.9497,
+    "S90_menos_oraculo_medio": 0.0
+   },
+   "ingenuo": {
+    "sesgo_tasa": -0.0067,
+    "sesgo_vs_oraculo": -0.0659,
+    "logscore_demanda_real": -0.5874,
+    "servicio_con_S90": 0.9367,
+    "S90_menos_oraculo_medio": -0.17
+   },
+   "exclusion": {
+    "sesgo_tasa": -0.0127,
+    "sesgo_vs_oraculo": -0.0715,
+    "logscore_demanda_real": -0.5867,
+    "servicio_con_S90": 0.9365,
+    "S90_menos_oraculo_medio": -0.18
+   },
+   "tesis": {
+    "sesgo_tasa": 0.0701,
+    "sesgo_vs_oraculo": 0.0063,
+    "logscore_demanda_real": -0.5845,
+    "servicio_con_S90": 0.9504,
+    "S90_menos_oraculo_medio": 0.02
+   }
+  },
+  {
+   "I0": 10,
+   "censura_ventanas": 0.0121,
+   "demanda_perdida": 0.0402,
+   "oraculo": {
+    "sesgo_tasa": 0.072,
+    "sesgo_vs_oraculo": 0.0,
+    "logscore_demanda_real": -0.5841,
+    "servicio_con_S90": 0.9509,
+    "S90_menos_oraculo_medio": 0.0
+   },
+   "ingenuo": {
+    "sesgo_tasa": 0.0369,
+    "sesgo_vs_oraculo": -0.0327,
+    "logscore_demanda_real": -0.5847,
+    "servicio_con_S90": 0.9458,
+    "S90_menos_oraculo_medio": -0.08
+   },
+   "exclusion": {
+    "sesgo_tasa": 0.0336,
+    "sesgo_vs_oraculo": -0.0358,
+    "logscore_demanda_real": -0.5845,
+    "servicio_con_S90": 0.9454,
+    "S90_menos_oraculo_medio": -0.09
+   },
+   "tesis": {
+    "sesgo_tasa": 0.0774,
+    "sesgo_vs_oraculo": 0.005,
+    "logscore_demanda_real": -0.5844,
+    "servicio_con_S90": 0.9517,
+    "S90_menos_oraculo_medio": 0.02
+   }
+  },
+  {
+   "I0": 15,
+   "censura_ventanas": 0.0049,
+   "demanda_perdida": 0.0141,
+   "oraculo": {
+    "sesgo_tasa": 0.0775,
+    "sesgo_vs_oraculo": 0.0,
+    "logscore_demanda_real": -0.5842,
+    "servicio_con_S90": 0.9517,
+    "S90_menos_oraculo_medio": 0.0
+   },
+   "ingenuo": {
+    "sesgo_tasa": 0.0653,
+    "sesgo_vs_oraculo": -0.0113,
+    "logscore_demanda_real": -0.5841,
+    "servicio_con_S90": 0.9502,
+    "S90_menos_oraculo_medio": -0.03
+   },
+   "exclusion": {
+    "sesgo_tasa": 0.0635,
+    "sesgo_vs_oraculo": -0.013,
+    "logscore_demanda_real": -0.5841,
+    "servicio_con_S90": 0.95,
+    "S90_menos_oraculo_medio": -0.03
+   },
+   "tesis": {
+    "sesgo_tasa": 0.0803,
+    "sesgo_vs_oraculo": 0.0026,
+    "logscore_demanda_real": -0.5843,
+    "servicio_con_S90": 0.9521,
+    "S90_menos_oraculo_medio": 0.01
+   }
+  }
+ ]
+}
