@@ -1,0 +1,81 @@
+name: Importar archivo Halford (una vez)
+
+# Descarga las fotos de estado de Ecobici (ene–sep 2026) del archivo público de MaxHalford/bike-sharing-history
+# y las guarda como CSV comprimido en la rama halford-archive. Se corre a mano desde la pestaña Actions.
+on:
+  workflow_dispatch:
+    inputs:
+      meses:
+        description: "Meses a importar (AAAA/Mmm separados por coma)"
+        default: "2026/Jan,2026/Feb,2026/Mar,2026/Apr,2026/May,2026/Jun,2026/Jul,2026/Aug,2026/Sep"
+
+permissions:
+  contents: write
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install duckdb==1.1.3 pandas==2.2.3
+
+      - name: Preparar rama halford-archive
+        run: |
+          git config user.name "importa-halford[bot]"
+          git config user.email "importa-halford@users.noreply.github.com"
+          if git fetch --depth=1 origin halford-archive 2>/dev/null; then
+            git worktree add -B halford-archive archive FETCH_HEAD
+          else
+            git worktree add --detach archive
+            cd archive
+            git checkout --orphan halford-archive
+            git rm -rf --quiet . || true
+            printf "# Fotos de estado de Ecobici importadas de MaxHalford/bike-sharing-history (CC: ver su repo). Ver rama main.\n" > README.md
+          fi
+
+      - name: Descargar y convertir
+        env:
+          MESES: ${{ github.event.inputs.meses }}
+        run: |
+          python3 - <<'EOF'
+          import os, pathlib, duckdb
+          out = pathlib.Path("archive/halford"); out.mkdir(parents=True, exist_ok=True)
+          base = "https://storage.googleapis.com/bike-sharing-history/mexico-city/ecobici"
+          want = ["station_id", "short_name", "name", "capacity", "num_bikes_available", "num_bikes_disabled",
+                  "num_docks_available", "num_docks_disabled", "is_installed", "is_renting", "is_returning",
+                  "last_reported", "committed_at_utc", "fetched_at", "scraped_at", "timestamp"]
+          con = duckdb.connect()
+          con.execute("INSTALL httpfs; LOAD httpfs; SET TimeZone='UTC'")
+          resumen = []
+          for mes in [m.strip() for m in os.environ["MESES"].split(",") if m.strip()]:
+              url = f"{base}/{mes}.parquet"
+              try:
+                  cols = [r[0] for r in con.execute(f"DESCRIBE SELECT * FROM read_parquet('{url}')").fetchall()]
+              except Exception as e:
+                  resumen.append(f"{mes}: ERROR {e}"); continue
+              (out / "columnas.txt").write_text("\n".join(cols) + "\n")
+              sel = [c for c in want if c in cols] or cols
+              dest = out / f"{mes.replace('/', '_')}.csv.gz"
+              con.execute(f"""COPY (SELECT {', '.join('"'+c+'"' for c in sel)} FROM read_parquet('{url}'))
+                              TO '{dest}' (HEADER, DELIMITER ',', COMPRESSION gzip)""")
+              n = con.execute(f"SELECT count(*) FROM read_parquet('{url}')").fetchone()[0]
+              resumen.append(f"{mes}: {n} filas, {dest.stat().st_size/1e6:.1f} MB, columnas={sel}")
+              print(resumen[-1], flush=True)
+          (out / "resumen.txt").write_text("\n".join(resumen) + "\n")
+          EOF
+
+      - name: Guardar
+        run: |
+          cd archive
+          git add -A
+          if git diff --cached --quiet; then echo "sin cambios"; exit 0; fi
+          git commit -q -m "importa archivo Halford $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q origin halford-archive
