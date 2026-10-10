@@ -22,6 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 GBFS = "https://gbfs.mex.lyftbikes.com/gbfs/gbfs.json"
+CAP_MIN = 3
 FIELDS = ["station_id", "num_bikes_available", "num_bikes_disabled", "num_docks_available",
           "num_docks_disabled", "is_installed", "is_renting", "is_returning", "last_reported"]
 
@@ -69,8 +70,13 @@ def update_info(info: dict, out: Path) -> list[dict]:
     if latest.exists():
         with gzip.open(latest, "rt", encoding="utf-8") as fh:
             old = {s["station_id"]: s for s in json.load(fh)["data"]["stations"]}
-    key = lambda s: (s.get("name"), round(s.get("lat", 0), 6), round(s.get("lon", 0), 6), s.get("capacity"))
-    if old and {k: key(v) for k, v in old.items()} == {k: key(v) for k, v in new.items()}:
+    # La "capacidad" del feed oscila ±1–2 cuando se descompone/repara un anclaje: sólo cuenta un cambio >= CAP_MIN.
+    key = lambda s: (s.get("name"), round(s.get("lat", 0), 5), round(s.get("lon", 0), 5))
+    same_ids = old.keys() == new.keys()
+    same_meta = same_ids and all(key(old[k]) == key(new[k]) for k in new)
+    big_cap = [k for k in (new.keys() & old.keys())
+               if abs((new[k].get("capacity") or 0) - (old[k].get("capacity") or 0)) >= CAP_MIN]
+    if old and same_meta and not big_cap:
         return []
     ts = datetime.fromtimestamp(info["last_updated"], tz=timezone.utc)
     changes = []
@@ -80,8 +86,8 @@ def update_info(info: dict, out: Path) -> list[dict]:
     for sid in old.keys() - new.keys():
         s = old[sid]; changes.append({"tipo": "baja", "station_id": sid, "nombre": s.get("name"),
                                       "lat": s.get("lat"), "lon": s.get("lon"), "capacidad": s.get("capacity")})
-    for sid in new.keys() & old.keys():
-        if new[sid].get("capacity") != old[sid].get("capacity"):
+    for sid in big_cap if old else []:
+        if True:
             s = new[sid]; changes.append({"tipo": "capacidad", "station_id": sid, "nombre": s.get("name"),
                                           "lat": s.get("lat"), "lon": s.get("lon"), "capacidad": s.get("capacity")})
     blob = json.dumps(info, ensure_ascii=False).encode("utf-8")
