@@ -49,6 +49,7 @@ recorded. GitHub does not guarantee exact timing; occasional delays and gaps are
 | --- | --- |
 | Reconstruction (Jan–Sep 2026) | 13.9 M trips; ~3,900 bikes rebalanced by truck per day, reconstructed from each bike's trip chain. |
 | Censored demand | Observed pickups 50,832/day; estimated demand 53,793/day (+5.8%); lost pickups 370–4,141/day. |
+| Censored demand, thesis method (`run_bayes.py`) | Grid-Bayesian learning with negative-binomial demand and tail likelihood for stock-out windows. Out-of-sample (train Jan–Jun, test Jul–Sep): best log score for pickups (−0.8129 vs. −0.8148 naive, −0.8221 dropping censored windows); 80% intervals cover 81.6%. Latent pickups 55,409/day vs. 50,887 implied by trips (+8.9%). |
 | Site ranking (spatial cross-validation) | Gradient boosting captures 28.8% of demand with the top 20% of sites, same as a simple rule (29.0%); oracle 38.7%. |
 | 2023→2024 expansion wave (120 stations) | Model 28.9% vs. simple rule 27.6% (difference not significant). Models under-predicted new-station demand by 12–21% → level correction factor 1.198. |
 

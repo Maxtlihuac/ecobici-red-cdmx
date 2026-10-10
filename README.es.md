@@ -49,6 +49,7 @@ GitHub no garantiza el horario exacto; se esperan retrasos y huecos ocasionales.
 | --- | --- |
 | Reconstrucción (ene–sep 2026) | 13.9 M viajes; ~3,900 bicis rebalanceadas en camión por día, reconstruidas por cadena de cada bici. |
 | Demanda censurada | Retiros observados 50,832/día; demanda estimada 53,793/día (+5.8%); retiros perdidos 370–4,141/día. |
+| Demanda censurada, método de la tesis (`run_bayes.py`) | Aprendizaje bayesiano en malla con demanda binomial negativa y verosimilitud de cola en ventanas con agotamiento. Fuera de muestra (entrena ene–jun, prueba jul–sep): mejor puntaje logarítmico en retiros (−0.8129 vs. −0.8148 ingenuo y −0.8221 descartando ventanas censuradas); intervalos 80% cubren 81.6%. Retiros latentes 55,409/día vs. 50,887 implícitos en los viajes (+8.9%). |
 | Ranking de sitios (validación espacial) | Un modelo de gradient boosting captura 28.8% de la demanda con el top-20%, igual que una regla simple (29.0%); oráculo 38.7%. |
 | Ola de expansión 2023→2024 (120 estaciones) | Modelo 28.9% vs. regla simple 27.6% (diferencia no significativa). Los modelos subestimaron 12–21% el nivel de demanda de estaciones nuevas → factor de corrección 1.198. |
 
