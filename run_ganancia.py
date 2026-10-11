@@ -7,6 +7,8 @@ su tasa de censura en entrenamiento (ventanas censuradas / ventanas con evidenci
 """
 from __future__ import annotations
 
+import os
+
 import json
 import sys
 from pathlib import Path
@@ -18,9 +20,9 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 from load import read_stations  # noqa: E402
 import bayes_grid as bg  # noqa: E402
 
-import os
 UP = Path(os.environ.get("ECOBICI_DATA", "data"))
-OUT = Path("out/ganancia"); OUT.mkdir(parents=True, exist_ok=True)
+A_SRC = os.environ.get("A_SRC", "cotas")
+OUT = Path("out/ganancia" if A_SRC == "cotas" else "out/ganancia_hibrida"); OUT.mkdir(parents=True, exist_ok=True)
 FREQ, PRIOR_H = 10, 20.0
 DH = FREQ / 60
 K1 = bg.KMAX + 1
@@ -40,6 +42,9 @@ day = np.asarray((grid - t0).days)
 test_days = np.unique(day[~is_train]); D = len(test_days); dpos = {d: i for i, d in enumerate(test_days)}
 
 SIDES = {"ret": (Cret, L.astype(np.int32), 2.53), "dev": (Cdev, (cap - U).astype(np.int32), 3.004)}
+if A_SRC == "hibrida":
+    zh = np.load("out/bayes_hibrida/disp_hibrida.npz")
+    SIDES = {"ret": (Cret, zh["Ab"].astype(np.int32), 2.464), "dev": (Cdev, zh["Ad"].astype(np.int32), 2.967)}
 METHODS = ("ingenuo", "exclusion", "tesis")
 
 

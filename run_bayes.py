@@ -25,7 +25,8 @@ import bayes_grid as bg  # noqa: E402
 
 UP = Path(os.environ.get("ECOBICI_DATA", "data"))
 TRIPS = Path(os.environ.get("ECOBICI_TRIPS", "data/viajes_2026"))
-OUT = Path("out/bayes"); OUT.mkdir(parents=True, exist_ok=True)
+A_SRC = os.environ.get("A_SRC", "cotas")   # "cotas" (L, cap−U) o "hibrida" (fotos Halford + viajes)
+OUT = Path("out/bayes" if A_SRC == "cotas" else "out/bayes_hibrida"); OUT.mkdir(parents=True, exist_ok=True)
 FREQ, PRIOR_H = 10, 20.0
 DH = FREQ / 60
 K1 = bg.KMAX + 1
@@ -36,7 +37,7 @@ S = len(stations)
 cap = st["cap"].to_numpy()[:, None]
 t0, t1 = pd.Timestamp("2026-01-01"), pd.Timestamp("2026-10-01")
 
-cache = OUT / "cache.npz"
+cache = Path("out/bayes") / "cache.npz"
 if cache.exists():
     z = np.load(cache); L, U, Cret, Cdev = z["L"], z["U"], z["Cret"], z["Cdev"]
 else:
@@ -59,6 +60,9 @@ hour, wk = np.asarray(grid.hour), np.asarray(grid.dayofweek < 5)
 is_train = np.asarray(grid < pd.Timestamp("2026-07-01"))
 
 SIDES = {"ret": (Cret, L.astype(np.int32)), "dev": (Cdev, (cap - U).astype(np.int32))}
+if A_SRC == "hibrida":
+    zh = np.load("out/bayes_hibrida/disp_hibrida.npz")
+    SIDES = {"ret": (Cret, zh["Ab"].astype(np.int32)), "dev": (Cdev, zh["Ad"].astype(np.int32))}
 
 
 def hist(Kc, mask, cols):

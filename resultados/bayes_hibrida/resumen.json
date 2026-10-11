@@ -1,0 +1,52 @@
+{
+ "evaluacion_jul_sep": {
+  "ingenuo_ret": {
+   "logscore_por_ventana": -0.8127,
+   "cobertura_80": 0.812
+  },
+  "exclusion_ret": {
+   "logscore_por_ventana": -0.8167,
+   "cobertura_80": 0.811
+  },
+  "tesis_ret": {
+   "logscore_por_ventana": -0.8088,
+   "cobertura_80": 0.817
+  },
+  "ingenuo_dev": {
+   "logscore_por_ventana": -0.7609,
+   "cobertura_80": 0.813
+  },
+  "exclusion_dev": {
+   "logscore_por_ventana": -0.7621,
+   "cobertura_80": 0.812
+  },
+  "tesis_dev": {
+   "logscore_por_ventana": -0.7604,
+   "cobertura_80": 0.814
+  }
+ },
+ "demanda_red_dia": {
+  "exclusion_dev": 50189,
+  "ingenuo_dev": 50885,
+  "tesis_dev": 51959,
+  "exclusion_ret": 49728,
+  "ingenuo_ret": 50989,
+  "tesis_ret": 58787
+ },
+ "dispersion_r": {
+  "ret": 2.464,
+  "dev": 2.967
+ },
+ "ventanas": {
+  "ret": {
+   "exactas": 21737401,
+   "censuradas": 1295449,
+   "sin_evidencia": 3581374
+  },
+  "dev": {
+   "exactas": 25219198,
+   "censuradas": 228901,
+   "sin_evidencia": 1166125
+  }
+ }
+}

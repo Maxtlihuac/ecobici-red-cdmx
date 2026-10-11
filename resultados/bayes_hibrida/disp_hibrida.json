@@ -1,0 +1,19 @@
+{
+ "max_edad_ventanas": 12,
+ "fraccion_ventanas_con_foto_reciente_06_23h": 0.9451,
+ "error_propagacion_bicis": {
+  "n": 6228589,
+  "exacto": 0.622,
+  "abs_le_1": 0.8767,
+  "media": 0.042,
+  "mae": 0.705
+ },
+ "error_propagacion_anclajes": {
+  "exacto": 0.6209,
+  "abs_le_1": 0.879,
+  "media": -0.006,
+  "mae": 0.702
+ },
+ "vacia_por_hibrida_06_23h": 0.1395,
+ "vacia_por_L_06_23h": 0.0898
+}
