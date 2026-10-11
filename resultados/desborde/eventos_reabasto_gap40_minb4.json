@@ -1,0 +1,133 @@
+{
+ "eventos": 14204,
+ "estaciones": 655,
+ "bicis_tras_reabasto_mediana": 6.0,
+ "propia": {
+  "exceso_antes": -0.0933,
+  "exceso_despues": 0.185,
+  "cambio_despues_menos_antes": 0.2782,
+  "ic95": [
+   0.2642,
+   0.2921
+  ],
+  "dif_en_dif_vs_lejanas": 0.3621,
+  "dif_en_dif_ic95": [
+   0.2598,
+   0.4625
+  ]
+ },
+ "vecinas_0_400m": {
+  "exceso_antes": 0.121,
+  "exceso_despues": 0.1576,
+  "cambio_despues_menos_antes": 0.0366,
+  "ic95": [
+   0.0045,
+   0.0679
+  ],
+  "dif_en_dif_vs_lejanas": 0.1204,
+  "dif_en_dif_ic95": [
+   0.0306,
+   0.2159
+  ]
+ },
+ "vecinas_400_800m": {
+  "exceso_antes": 0.2193,
+  "exceso_despues": 0.1707,
+  "cambio_despues_menos_antes": -0.0486,
+  "ic95": [
+   -0.1056,
+   0.0023
+  ],
+  "dif_en_dif_vs_lejanas": 0.0353,
+  "dif_en_dif_ic95": [
+   -0.0588,
+   0.1337
+  ]
+ },
+ "lejanas_800_1500m": {
+  "exceso_antes": 0.6133,
+  "exceso_despues": 0.5294,
+  "cambio_despues_menos_antes": -0.0839,
+  "ic95": [
+   -0.1896,
+   0.0186
+  ]
+ },
+ "salto_esperado_propia_tesis": 0.1888,
+ "salto_esperado_propia_ingenuo": 0.0095,
+ "retiros_propia_despues_por_ventana": 0.893,
+ "latente_tesis_por_ventana": 0.8969,
+ "latente_ingenuo_por_ventana": 0.7176,
+ "curvas_exceso_por_ventana_relativa": {
+  "propia": [
+   -0.0233,
+   -0.1227,
+   -0.2675,
+   -0.3195,
+   -0.1926,
+   0.3658,
+   0.458,
+   0.2497,
+   0.1692,
+   0.0972,
+   0.0739,
+   0.0618
+  ],
+  "vecinas_0_400m": [
+   0.0324,
+   0.0018,
+   0.0967,
+   0.1483,
+   0.2521,
+   0.1948,
+   0.1835,
+   0.2211,
+   0.1174,
+   0.1232,
+   0.1533,
+   0.1469
+  ],
+  "vecinas_400_800m": [
+   0.234,
+   0.1474,
+   0.2987,
+   0.2827,
+   0.2412,
+   0.1118,
+   0.1354,
+   0.1699,
+   0.2062,
+   0.1454,
+   0.2079,
+   0.1594
+  ],
+  "lejanas_800_1500m": [
+   0.7484,
+   0.6858,
+   0.6171,
+   0.6284,
+   0.5134,
+   0.4867,
+   0.4895,
+   0.4956,
+   0.5588,
+   0.5336,
+   0.6309,
+   0.4682
+  ]
+ },
+ "ventanas_relativas": [
+  -6,
+  -5,
+  -4,
+  -3,
+  -2,
+  -1,
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ]
+}

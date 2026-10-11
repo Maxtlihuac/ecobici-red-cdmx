@@ -1,0 +1,116 @@
+{
+ "0_400m": {
+  "sin_control_vecinas__efecto": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": -0.0257,
+   "ic95": [
+    -0.0507,
+    0.0022
+   ]
+  },
+  "sin_control_vecinas__placebo_30min_antes": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": 0.0002,
+   "ic95": [
+    -0.0364,
+    0.0406
+   ]
+  },
+  "con_bicis_en_vecinas__efecto": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": 0.3663,
+   "ic95": [
+    0.353,
+    0.3798
+   ]
+  },
+  "con_bicis_en_vecinas__placebo_30min_antes": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": -0.0734,
+   "ic95": [
+    -0.0959,
+    -0.0514
+   ]
+  },
+  "ventanas_vacias": 2416819,
+  "demanda_perdida_media_por_ventana_vacia": 0.6937,
+  "vecinas_media": 4.4,
+  "fraccion_desbordada": 0.528,
+  "fraccion_desbordada_ic95": [
+   0.509,
+   0.547
+  ]
+ },
+ "0_250m": {
+  "sin_control_vecinas__efecto": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": -0.036,
+   "ic95": [
+    -0.0597,
+    -0.0149
+   ]
+  },
+  "sin_control_vecinas__placebo_30min_antes": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": -0.0022,
+   "ic95": [
+    -0.0301,
+    0.0248
+   ]
+  },
+  "con_bicis_en_vecinas__efecto": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": 0.245,
+   "ic95": [
+    0.235,
+    0.2552
+   ]
+  },
+  "con_bicis_en_vecinas__placebo_30min_antes": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": -0.0437,
+   "ic95": [
+    -0.0586,
+    -0.0298
+   ]
+  },
+  "ventanas_vacias": 1705535,
+  "demanda_perdida_media_por_ventana_vacia": 0.7027,
+  "vecinas_media": 1.92,
+  "fraccion_desbordada": 0.349,
+  "fraccion_desbordada_ic95": [
+   0.334,
+   0.363
+  ]
+ },
+ "250_500m": {
+  "sin_control_vecinas__efecto": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": -0.0091,
+   "ic95": [
+    -0.0358,
+    0.0152
+   ]
+  },
+  "sin_control_vecinas__placebo_30min_antes": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": 0.0121,
+   "ic95": [
+    -0.0318,
+    0.0544
+   ]
+  },
+  "con_bicis_en_vecinas__efecto": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": 0.3826,
+   "ic95": [
+    0.3654,
+    0.3997
+   ]
+  },
+  "con_bicis_en_vecinas__placebo_30min_antes": {
+   "retiros_extra_en_vecinas_por_ventana_vacia": -0.0613,
+   "ic95": [
+    -0.0846,
+    -0.0363
+   ]
+  },
+  "ventanas_vacias": 2444326,
+  "demanda_perdida_media_por_ventana_vacia": 0.6918,
+  "vecinas_media": 5.79,
+  "fraccion_desbordada": 0.553,
+  "fraccion_desbordada_ic95": [
+   0.528,
+   0.578
+  ]
+ }
+}
