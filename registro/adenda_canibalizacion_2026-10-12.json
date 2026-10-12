@@ -1,0 +1,49 @@
+{
+ "titulo": "Adenda al registro de predicciones: canibalización y demanda inducida en la expansión 2026",
+ "fecha_registro": "2026-10-12",
+ "registro_original": "registro_predicciones_2026-10-04.csv (SHA-256 46140e98aea343dce4ad729e7b517843dca48f7a35e7dadbf6aaa5fde217f45b)",
+ "evidencia_base": {
+  "ola": "2023→2024 (oct-2023 vs oct-2024 y oct-2025)",
+  "estaciones_existentes": 557,
+  "estaciones_nuevas": 120,
+  "modelo": "Δlog(retiros/día + 1) de cada estación existente ~ nuevas a 0–300 m + 300–600 m + 600–1000 m + log(retiros 2023 + 1) + estaciones a 500 m en 2023 + efecto fijo de alcaldía; IC 95% por bootstrap de estaciones (2000).",
+  "efecto_por_nueva_0_300m_pct": {
+   "2024": -15.0,
+   "2025": -15.0,
+   "coef_ic95_2024": [
+    -0.2418,
+    -0.0775
+   ]
+  },
+  "efecto_por_nueva_300_600m_pct": {
+   "2024": -1.0,
+   "coef_ic95_2024": [
+    -0.0375,
+    0.0242
+   ]
+  },
+  "efecto_por_nueva_600_1000m_pct": {
+   "2024": 2.5,
+   "coef_ic95_2024": [
+    0.0092,
+    0.0384
+   ]
+  },
+  "balance_2024": {
+   "retiros_dia_estaciones_nuevas": 7457,
+   "cambio_atribuible_existentes_dia": 404,
+   "fraccion_que_vendria_de_existentes": -0.054
+  },
+  "limite": "Solo viajes; sin datos de disponibilidad en 2023. La ubicación de las nuevas no fue aleatoria; se controla por alcaldía, densidad y nivel previo."
+ },
+ "predicciones_2026": {
+  "H1_canibalizacion_cercana": "Por cada estación nueva abierta a ≤ 300 m de una estación existente, los retiros por día de la existente cambian entre −22% y −8% (centro −15%) frente a estaciones sin nuevas a < 1 km.",
+  "H2_sin_efecto_300_600": "Nuevas a 300–600 m: efecto entre −4% y +2% por nueva.",
+  "H3_efecto_red_600_1000": "Nuevas a 600–1000 m: efecto positivo, entre +1% y +4% por nueva.",
+  "H4_demanda_neta": "Al menos 90% de los retiros de las estaciones nuevas son demanda nueva: el cambio atribuible en existentes a < 1 km no resta más de 10% de los retiros de las nuevas.",
+  "H5_geografia": "Con los 424 sitios de nuestro registro, 423 de 424 quedan a más de 600 m de cualquier estación existente; solo 3 estaciones existentes tienen un sitio a ≤ 600 m y 12 a ≤ 1000 m. Si los sitios reales de SEMOVI se parecen, la canibalización de la red actual será menor a 1% de sus retiros. Si difieren, H1–H4 se evalúan con las distancias reales.",
+  "exploratorio_sin_umbral": "Con la captura propia cada 5 min se medirá también si las existentes a < 1 km pasan más o menos tiempo vacías después de las aperturas."
+ },
+ "protocolo": "Las estaciones reales se identifican por su alta en info/cambios.csv (rama gbfs-archive). Se repite el mismo modelo comparando el mismo mes calendario antes y un año después de la primera apertura (o oct-2026 vs oct-2027 si las aperturas ocurren entre esas fechas). Se reportan los coeficientes con su IC y si caen en los rangos de H1–H4, sin reajustar el modelo.",
+ "codigo": "run_canibalizacion.py; resultados en resultados/canibalizacion/"
+}

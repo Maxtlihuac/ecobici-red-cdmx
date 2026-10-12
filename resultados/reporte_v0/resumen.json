@@ -1,0 +1,528 @@
+{
+ "semana": [
+  "2026-09-21",
+  "2026-09-27"
+ ],
+ "horario": "06:00–22:59",
+ "cobertura_fotos_semana": 0.9914,
+ "registrados_semana": 358551,
+ "perdidos_semana": 40712,
+ "perdidos_semana_sin_escalar": 70802,
+ "factor_escala": 0.575,
+ "pct_perdidos_semana": 0.102,
+ "horas_estacion_vacia_semana": 13392,
+ "horas_estacion_llena_semana": 1113,
+ "pct_tiempo_vacia_red": 0.1677,
+ "pct_tiempo_llena_red": 0.0139,
+ "danadas_pico_media_estacion": 1.13,
+ "danadas_pico_total_red": 760,
+ "fotos_pico": 148,
+ "top10_concentran_pct_perdidos": 0.0431,
+ "top50_concentran_pct_perdidos": 0.1689,
+ "estaciones_con_mas_de_20pct_tiempo_vacia": 206,
+ "diario": [
+  {
+   "fecha": "2026-09-21",
+   "registrados": 55480,
+   "perdidos": 8059
+  },
+  {
+   "fecha": "2026-09-22",
+   "registrados": 56428,
+   "perdidos": 7906
+  },
+  {
+   "fecha": "2026-09-23",
+   "registrados": 60446,
+   "perdidos": 6990
+  },
+  {
+   "fecha": "2026-09-24",
+   "registrados": 59151,
+   "perdidos": 6661
+  },
+  {
+   "fecha": "2026-09-25",
+   "registrados": 55555,
+   "perdidos": 6581
+  },
+  {
+   "fecha": "2026-09-26",
+   "registrados": 36449,
+   "perdidos": 1597
+  },
+  {
+   "fecha": "2026-09-27",
+   "registrados": 35042,
+   "perdidos": 2918
+  }
+ ],
+ "por_hora": [
+  {
+   "hora": 6,
+   "registrados_dia": 1720.9,
+   "latente_dia": 1807.8,
+   "perdidos_dia": 86.9,
+   "pct_estaciones_vacias": 0.1298
+  },
+  {
+   "hora": 7,
+   "registrados_dia": 3079.1,
+   "latente_dia": 3377.7,
+   "perdidos_dia": 298.5,
+   "pct_estaciones_vacias": 0.1417
+  },
+  {
+   "hora": 8,
+   "registrados_dia": 3966.3,
+   "latente_dia": 4527.6,
+   "perdidos_dia": 561.3,
+   "pct_estaciones_vacias": 0.1728
+  },
+  {
+   "hora": 9,
+   "registrados_dia": 3104.4,
+   "latente_dia": 3554.4,
+   "perdidos_dia": 450.0,
+   "pct_estaciones_vacias": 0.2017
+  },
+  {
+   "hora": 10,
+   "registrados_dia": 2581.9,
+   "latente_dia": 2889.3,
+   "perdidos_dia": 307.5,
+   "pct_estaciones_vacias": 0.1856
+  },
+  {
+   "hora": 11,
+   "registrados_dia": 2530.6,
+   "latente_dia": 2784.4,
+   "perdidos_dia": 253.9,
+   "pct_estaciones_vacias": 0.1585
+  },
+  {
+   "hora": 12,
+   "registrados_dia": 2651.6,
+   "latente_dia": 2897.7,
+   "perdidos_dia": 246.1,
+   "pct_estaciones_vacias": 0.1486
+  },
+  {
+   "hora": 13,
+   "registrados_dia": 3116.6,
+   "latente_dia": 3396.9,
+   "perdidos_dia": 280.3,
+   "pct_estaciones_vacias": 0.146
+  },
+  {
+   "hora": 14,
+   "registrados_dia": 3732.1,
+   "latente_dia": 4041.8,
+   "perdidos_dia": 309.6,
+   "pct_estaciones_vacias": 0.1467
+  },
+  {
+   "hora": 15,
+   "registrados_dia": 3729.7,
+   "latente_dia": 4064.5,
+   "perdidos_dia": 334.7,
+   "pct_estaciones_vacias": 0.1566
+  },
+  {
+   "hora": 16,
+   "registrados_dia": 3662.0,
+   "latente_dia": 3980.5,
+   "perdidos_dia": 318.5,
+   "pct_estaciones_vacias": 0.1527
+  },
+  {
+   "hora": 17,
+   "registrados_dia": 4161.9,
+   "latente_dia": 4671.7,
+   "perdidos_dia": 509.8,
+   "pct_estaciones_vacias": 0.1686
+  },
+  {
+   "hora": 18,
+   "registrados_dia": 4060.0,
+   "latente_dia": 4767.5,
+   "perdidos_dia": 707.5,
+   "pct_estaciones_vacias": 0.219
+  },
+  {
+   "hora": 19,
+   "registrados_dia": 3376.9,
+   "latente_dia": 3916.6,
+   "perdidos_dia": 539.8,
+   "pct_estaciones_vacias": 0.2316
+  },
+  {
+   "hora": 20,
+   "registrados_dia": 2468.7,
+   "latente_dia": 2787.2,
+   "perdidos_dia": 318.4,
+   "pct_estaciones_vacias": 0.2065
+  },
+  {
+   "hora": 21,
+   "registrados_dia": 2004.6,
+   "latente_dia": 2162.7,
+   "perdidos_dia": 158.1,
+   "pct_estaciones_vacias": 0.1332
+  },
+  {
+   "hora": 22,
+   "registrados_dia": 1274.4,
+   "latente_dia": 1409.3,
+   "perdidos_dia": 134.8,
+   "pct_estaciones_vacias": 0.1505
+  }
+ ],
+ "mensual": [
+  {
+   "mes": 1,
+   "dias": 31,
+   "registrados_dia": 47977,
+   "perdidos_dia": 7535,
+   "cobertura_fotos": 0.989
+  },
+  {
+   "mes": 2,
+   "dias": 28,
+   "registrados_dia": 53227,
+   "perdidos_dia": 4961,
+   "cobertura_fotos": 0.988
+  },
+  {
+   "mes": 3,
+   "dias": 31,
+   "registrados_dia": 51935,
+   "perdidos_dia": 6074,
+   "cobertura_fotos": 0.991
+  },
+  {
+   "mes": 4,
+   "dias": 30,
+   "registrados_dia": 51713,
+   "perdidos_dia": 7327,
+   "cobertura_fotos": 0.996
+  },
+  {
+   "mes": 5,
+   "dias": 31,
+   "registrados_dia": 50609,
+   "perdidos_dia": 6915,
+   "cobertura_fotos": 0.987
+  },
+  {
+   "mes": 6,
+   "dias": 30,
+   "registrados_dia": 48354,
+   "perdidos_dia": 9431,
+   "cobertura_fotos": 0.982
+  },
+  {
+   "mes": 7,
+   "dias": 31,
+   "registrados_dia": 46773,
+   "perdidos_dia": 8872,
+   "cobertura_fotos": 0.877
+  },
+  {
+   "mes": 8,
+   "dias": 31,
+   "registrados_dia": 46227,
+   "perdidos_dia": 7588,
+   "cobertura_fotos": 0.852
+  },
+  {
+   "mes": 9,
+   "dias": 30,
+   "registrados_dia": 48605,
+   "perdidos_dia": 7681,
+   "cobertura_fotos": 0.86
+  }
+ ],
+ "top20": [
+  {
+   "estacion": "711",
+   "nombre": "CE-711 Molino del Rey - Av. Constituyentes",
+   "anclajes": 39,
+   "registrados": 447,
+   "perdidos": 195.0,
+   "horas_vacia": 42.8,
+   "horas_llena": 0.0,
+   "pct_vacia": 0.3599,
+   "pct_llena": 0.0,
+   "danadas_pico": 0.28,
+   "pct_fotos_pico_solo_danadas": 0.0946,
+   "pct_perdidos": 0.3037
+  },
+  {
+   "estacion": "208",
+   "nombre": "CE-208 Hesiodo-Lamartine",
+   "anclajes": 25,
+   "registrados": 1818,
+   "perdidos": 194.7,
+   "horas_vacia": 16.5,
+   "horas_llena": 8.0,
+   "pct_vacia": 0.1387,
+   "pct_llena": 0.0672,
+   "danadas_pico": 2.06,
+   "pct_fotos_pico_solo_danadas": 0.3243,
+   "pct_perdidos": 0.0967
+  },
+  {
+   "estacion": "675",
+   "nombre": "CE-675 Manuel Castro Padilla - Av. Revolución",
+   "anclajes": 35,
+   "registrados": 811,
+   "perdidos": 188.1,
+   "horas_vacia": 37.8,
+   "horas_llena": 0.0,
+   "pct_vacia": 0.3179,
+   "pct_llena": 0.0,
+   "danadas_pico": 0.63,
+   "pct_fotos_pico_solo_danadas": 0.1284,
+   "pct_perdidos": 0.1883
+  },
+  {
+   "estacion": "494",
+   "nombre": "CE-494 Tláloc - Calzada México Tacuba",
+   "anclajes": 22,
+   "registrados": 1490,
+   "perdidos": 187.3,
+   "horas_vacia": 24.7,
+   "horas_llena": 1.0,
+   "pct_vacia": 0.2073,
+   "pct_llena": 0.0084,
+   "danadas_pico": 2.36,
+   "pct_fotos_pico_solo_danadas": 0.2703,
+   "pct_perdidos": 0.1117
+  },
+  {
+   "estacion": "257",
+   "nombre": "CE-257 Manuel Maria Contreras-Villalongin",
+   "anclajes": 19,
+   "registrados": 1086,
+   "perdidos": 169.2,
+   "horas_vacia": 25.3,
+   "horas_llena": 0.0,
+   "pct_vacia": 0.2129,
+   "pct_llena": 0.0,
+   "danadas_pico": 2.0,
+   "pct_fotos_pico_solo_danadas": 0.2365,
+   "pct_perdidos": 0.1348
+  },
+  {
+   "estacion": "014",
+   "nombre": "CE-014 Reforma - Río de Plata",
+   "anclajes": 39,
+   "registrados": 1419,
+   "perdidos": 168.8,
+   "horas_vacia": 19.8,
+   "horas_llena": 8.5,
+   "pct_vacia": 0.1667,
+   "pct_llena": 0.0714,
+   "danadas_pico": 2.95,
+   "pct_fotos_pico_solo_danadas": 0.2432,
+   "pct_perdidos": 0.1063
+  },
+  {
+   "estacion": "027",
+   "nombre": "CE-027 Reforma- Havre",
+   "anclajes": 43,
+   "registrados": 1691,
+   "perdidos": 164.9,
+   "horas_vacia": 14.8,
+   "horas_llena": 0.3,
+   "pct_vacia": 0.1476,
+   "pct_llena": 0.0033,
+   "danadas_pico": 3.72,
+   "pct_fotos_pico_solo_danadas": 0.1507,
+   "pct_perdidos": 0.0889
+  },
+  {
+   "estacion": "041",
+   "nombre": "CE-041 Reforma - Av. de la República",
+   "anclajes": 33,
+   "registrados": 817,
+   "perdidos": 163.8,
+   "horas_vacia": 23.0,
+   "horas_llena": 0.0,
+   "pct_vacia": 0.2255,
+   "pct_llena": 0.0,
+   "danadas_pico": 2.03,
+   "pct_fotos_pico_solo_danadas": 0.2568,
+   "pct_perdidos": 0.167
+  },
+  {
+   "estacion": "548",
+   "nombre": "CE-548 Dr. Mariano Azuela - Jose Antonio Alzate",
+   "anclajes": 39,
+   "registrados": 2066,
+   "perdidos": 163.3,
+   "horas_vacia": 12.8,
+   "horas_llena": 6.5,
+   "pct_vacia": 0.1078,
+   "pct_llena": 0.0546,
+   "danadas_pico": 3.28,
+   "pct_fotos_pico_solo_danadas": 0.2027,
+   "pct_perdidos": 0.0733
+  },
+  {
+   "estacion": "086",
+   "nombre": "CE-086 Sullivan-Insurgentes",
+   "anclajes": 17,
+   "registrados": 1159,
+   "perdidos": 158.5,
+   "horas_vacia": 27.3,
+   "horas_llena": 3.7,
+   "pct_vacia": 0.2297,
+   "pct_llena": 0.0308,
+   "danadas_pico": 1.49,
+   "pct_fotos_pico_solo_danadas": 0.2568,
+   "pct_perdidos": 0.1203
+  },
+  {
+   "estacion": "455",
+   "nombre": "CE-455 Pedregal-Ferrocarril De Cuernavaca",
+   "anclajes": 23,
+   "registrados": 509,
+   "perdidos": 151.6,
+   "horas_vacia": 36.3,
+   "horas_llena": 6.7,
+   "pct_vacia": 0.3053,
+   "pct_llena": 0.056,
+   "danadas_pico": 1.07,
+   "pct_fotos_pico_solo_danadas": 0.3108,
+   "pct_perdidos": 0.2295
+  },
+  {
+   "estacion": "010",
+   "nombre": "CE-010 Reforma - Ramírez",
+   "anclajes": 27,
+   "registrados": 923,
+   "perdidos": 148.3,
+   "horas_vacia": 24.8,
+   "horas_llena": 0.0,
+   "pct_vacia": 0.2435,
+   "pct_llena": 0.0,
+   "danadas_pico": 1.49,
+   "pct_fotos_pico_solo_danadas": 0.1014,
+   "pct_perdidos": 0.1384
+  },
+  {
+   "estacion": "451",
+   "nombre": "CE-451 Campos Elíseos-Goldsmith",
+   "anclajes": 33,
+   "registrados": 275,
+   "perdidos": 148.3,
+   "horas_vacia": 48.0,
+   "horas_llena": 3.7,
+   "pct_vacia": 0.4034,
+   "pct_llena": 0.0308,
+   "danadas_pico": 2.45,
+   "pct_fotos_pico_solo_danadas": 0.4054,
+   "pct_perdidos": 0.3503
+  },
+  {
+   "estacion": "495",
+   "nombre": "CE-495 Amado Nervo - de los Maestros",
+   "anclajes": 39,
+   "registrados": 1164,
+   "perdidos": 145.3,
+   "horas_vacia": 21.5,
+   "horas_llena": 0.5,
+   "pct_vacia": 0.1807,
+   "pct_llena": 0.0042,
+   "danadas_pico": 0.97,
+   "pct_fotos_pico_solo_danadas": 0.1216,
+   "pct_perdidos": 0.111
+  },
+  {
+   "estacion": "271-272",
+   "nombre": "CE-271-272 Jesús García - Carlos J. Meneses",
+   "anclajes": 74,
+   "registrados": 2907,
+   "perdidos": 143.8,
+   "horas_vacia": 8.5,
+   "horas_llena": 6.5,
+   "pct_vacia": 0.0714,
+   "pct_llena": 0.0546,
+   "danadas_pico": 5.03,
+   "pct_fotos_pico_solo_danadas": 0.1486,
+   "pct_perdidos": 0.0471
+  },
+  {
+   "estacion": "261",
+   "nombre": "CE-261 Paseo de la Reforma-Río de la Plata",
+   "anclajes": 43,
+   "registrados": 395,
+   "perdidos": 143.7,
+   "horas_vacia": 45.8,
+   "horas_llena": 11.3,
+   "pct_vacia": 0.3852,
+   "pct_llena": 0.0952,
+   "danadas_pico": 1.25,
+   "pct_fotos_pico_solo_danadas": 0.3108,
+   "pct_perdidos": 0.2668
+  },
+  {
+   "estacion": "242",
+   "nombre": "CE-242 Pról. Moliere-Miguel de Cervantes Saavedra",
+   "anclajes": 31,
+   "registrados": 1209,
+   "perdidos": 143.5,
+   "horas_vacia": 22.3,
+   "horas_llena": 7.0,
+   "pct_vacia": 0.1877,
+   "pct_llena": 0.0588,
+   "danadas_pico": 2.36,
+   "pct_fotos_pico_solo_danadas": 0.3176,
+   "pct_perdidos": 0.1061
+  },
+  {
+   "estacion": "197",
+   "nombre": "CE-197 Presa Falcón - Miguel De Cervantes Saavedra",
+   "anclajes": 31,
+   "registrados": 881,
+   "perdidos": 142.3,
+   "horas_vacia": 24.8,
+   "horas_llena": 9.0,
+   "pct_vacia": 0.2087,
+   "pct_llena": 0.0756,
+   "danadas_pico": 1.01,
+   "pct_fotos_pico_solo_danadas": 0.2838,
+   "pct_perdidos": 0.1391
+  },
+  {
+   "estacion": "084",
+   "nombre": "CE-084 Chilpancingo - Tlaxcala",
+   "anclajes": 19,
+   "registrados": 443,
+   "perdidos": 139.6,
+   "horas_vacia": 21.7,
+   "horas_llena": 0.0,
+   "pct_vacia": 0.2253,
+   "pct_llena": 0.0,
+   "danadas_pico": 0.8,
+   "pct_fotos_pico_solo_danadas": 0.1333,
+   "pct_perdidos": 0.2396
+  },
+  {
+   "estacion": "453",
+   "nombre": "CE-453 Pedregal-Teapa",
+   "anclajes": 31,
+   "registrados": 342,
+   "perdidos": 137.4,
+   "horas_vacia": 36.8,
+   "horas_llena": 0.0,
+   "pct_vacia": 0.31,
+   "pct_llena": 0.0,
+   "danadas_pico": 1.16,
+   "pct_fotos_pico_solo_danadas": 0.5135,
+   "pct_perdidos": 0.2866
+  }
+ ]
+}

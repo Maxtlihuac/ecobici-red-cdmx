@@ -1,0 +1,179 @@
+{
+ "existentes": 557,
+ "nuevas": 120,
+ "viajes_red_dia": {
+  "2023": 45219,
+  "2024": 66278,
+  "2025": 56592
+ },
+ "grupos": {
+  "sin nuevas a < 1 km": 270,
+  "300–600 m": 137,
+  "600–1000 m": 97,
+  "< 300 m": 53
+ },
+ "modelos": {
+  "retiros_2024": {
+   "por_nueva_0_300": {
+    "coef": -0.1622,
+    "ic95": [
+     -0.2418,
+     -0.0775
+    ],
+    "efecto_pct_por_nueva": -15.0
+   },
+   "por_nueva_300_600": {
+    "coef": -0.0104,
+    "ic95": [
+     -0.0375,
+     0.0242
+    ],
+    "efecto_pct_por_nueva": -1.0
+   },
+   "por_nueva_600_1000": {
+    "coef": 0.0245,
+    "ic95": [
+     0.0092,
+     0.0384
+    ],
+    "efecto_pct_por_nueva": 2.5
+   },
+   "cambio_medio_por_grupo_pct": {
+    "< 300 m": 31.3,
+    "300–600 m": 47.9,
+    "600–1000 m": 32.0,
+    "sin nuevas a < 1 km": 25.3
+   }
+  },
+  "retiros_2025": {
+   "por_nueva_0_300": {
+    "coef": -0.1628,
+    "ic95": [
+     -0.2338,
+     -0.0801
+    ],
+    "efecto_pct_por_nueva": -15.0
+   },
+   "por_nueva_300_600": {
+    "coef": -0.0122,
+    "ic95": [
+     -0.0446,
+     0.023
+    ],
+    "efecto_pct_por_nueva": -1.2
+   },
+   "por_nueva_600_1000": {
+    "coef": 0.0317,
+    "ic95": [
+     0.0154,
+     0.0482
+    ],
+    "efecto_pct_por_nueva": 3.2
+   },
+   "cambio_medio_por_grupo_pct": {
+    "< 300 m": 13.8,
+    "300–600 m": 26.8,
+    "600–1000 m": 13.2,
+    "sin nuevas a < 1 km": 6.7
+   }
+  },
+  "arribos_2024": {
+   "por_nueva_0_300": {
+    "coef": -0.1808,
+    "ic95": [
+     -0.2686,
+     -0.0851
+    ],
+    "efecto_pct_por_nueva": -16.5
+   },
+   "por_nueva_300_600": {
+    "coef": -0.0134,
+    "ic95": [
+     -0.043,
+     0.0199
+    ],
+    "efecto_pct_por_nueva": -1.3
+   },
+   "por_nueva_600_1000": {
+    "coef": 0.0239,
+    "ic95": [
+     0.0086,
+     0.0388
+    ],
+    "efecto_pct_por_nueva": 2.4
+   },
+   "cambio_medio_por_grupo_pct": {
+    "< 300 m": 29.2,
+    "300–600 m": 46.8,
+    "600–1000 m": 33.6,
+    "sin nuevas a < 1 km": 26.2
+   }
+  },
+  "retiros_entre_existentes_2024": {
+   "por_nueva_0_300": {
+    "coef": -0.1671,
+    "ic95": [
+     -0.2399,
+     -0.0842
+    ],
+    "efecto_pct_por_nueva": -15.4
+   },
+   "por_nueva_300_600": {
+    "coef": -0.0444,
+    "ic95": [
+     -0.0696,
+     -0.0112
+    ],
+    "efecto_pct_por_nueva": -4.3
+   },
+   "por_nueva_600_1000": {
+    "coef": -0.0004,
+    "ic95": [
+     -0.0143,
+     0.013
+    ],
+    "efecto_pct_por_nueva": -0.0
+   },
+   "cambio_medio_por_grupo_pct": {
+    "< 300 m": 3.0,
+    "300–600 m": 19.0,
+    "600–1000 m": 19.5,
+    "sin nuevas a < 1 km": 18.6
+   }
+  }
+ },
+ "balance_2024": {
+  "retiros_dia_estaciones_nuevas": 7457,
+  "cambio_atribuible_existentes_dia": 404,
+  "fraccion_que_vendria_de_existentes": -0.054
+ },
+ "existentes_expuestas_0_600": {
+  "n": 190,
+  "retiros_2023": 11226,
+  "retiros_2024": 15415,
+  "de_ellos_hacia_nuevas_2024": 2575
+ },
+ "registro_2026": {
+  "sitios": 424,
+  "sitios_sin_estacion_existente_a_600m": 423,
+  "sitios_sin_estacion_existente_a_1000m": 419,
+  "sitios_con_existente_a_300m": 0,
+  "por_alcaldia_sitios_sin_existente_a_600m": {
+   "Iztacalco": {
+    "sum": 59,
+    "count": 60
+   },
+   "Iztapalapa": {
+    "sum": 248,
+    "count": 248
+   },
+   "Tlalpan": {
+    "sum": 116,
+    "count": 116
+   }
+  },
+  "estaciones_existentes_con_sitio_nuevo_a_300m": 0,
+  "estaciones_existentes_con_sitio_nuevo_a_600m": 3,
+  "estaciones_existentes_con_sitio_nuevo_a_1000m": 12
+ }
+}
