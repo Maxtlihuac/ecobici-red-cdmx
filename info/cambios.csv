@@ -66,3 +66,4 @@ detectado_utc,tipo,station_id,nombre,lat,lon,capacidad
 2026-11-03T01:05:14+00:00,capacidad,106,CE-029 Reforma - Bucareli,19.434944,-99.150295,14
 2026-11-04T00:15:14+00:00,capacidad,363,CE-084 Chilpancingo - Tlaxcala,19.406872,-99.169572,15
 2026-11-04T00:15:14+00:00,capacidad,626,CE-699 San Gregorio - Felipe Carrillo Puerto,19.346895,-99.163868,23
+2026-11-04T02:25:13+00:00,capacidad,626,CE-699 San Gregorio - Felipe Carrillo Puerto,19.346895,-99.163868,3
